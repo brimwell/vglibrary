@@ -2,16 +2,20 @@
 
 const myLibrary = [];
 
-function VGame(title, developer, year, hrs, image) {
-    this.title = title;
-    this.developer = developer;
-    this.year = year;
-    this.hrs = hrs;
-    this.image = image;
-    this.played = false;
-    this.info = function() {
-        return `${name} was developed by ${developer} and released in ${year}. It takes ${hrs} hours to complete.`;
-    };
+class VGame {
+    constructor(title, developer, year, hrs, image) {
+        this.title = title;
+        this.developer = developer;
+        this.year = year;
+        this.hrs = hrs;
+        this.image = image;
+          
+    }
+    played = false;
+
+    info() {
+        return `${this.name} was developed by ${this.developer} and released in ${this.year}. It takes ${this.hrs} to complete.`;
+    }
 }
 
 function addGameToLibrary(game) {
